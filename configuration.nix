@@ -10,6 +10,7 @@
       <nixos-hardware/framework/13-inch/common>
       <nixos-hardware/framework/13-inch/7040-amd>
       ./hardware-configuration.nix
+      ./kdevops
     ];
 
   # Bootloader.
