@@ -127,6 +127,12 @@
   (import <nixpkgs-unstable> {}).aerc
   ];
 
+  fileSystems."/tmp" = {
+    device = "tmpfs";
+    fsType = "tmpfs";
+    options = [ "mode=1777" "size=8G" ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
