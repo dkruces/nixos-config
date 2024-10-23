@@ -7,6 +7,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      <nixos-hardware/framework/13-inch/common>
+      <nixos-hardware/framework/13-inch/7040-amd>
       ./hardware-configuration.nix
     ];
 
@@ -73,6 +75,7 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+  services.fwupd.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
