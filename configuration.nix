@@ -102,6 +102,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  virtualisation.podman = {
+  enable = true;
+  dockerCompat = true;
+};
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -109,6 +114,7 @@
    bitwarden-desktop
    btop
    discord
+   distrobox
    git
    gnome.gnome-tweaks
    gnumake
